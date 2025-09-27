@@ -1,133 +1,164 @@
-PROJECT 1
+PROJECT 2 
 
 NAME: Varadraj Kulkarni
-ROLL: 127 (PRN: B25CE1127)
+ROLL NO: 127 (PRN: B25CE1127)
 CLASS: FY CE 2
 BATCH: C
 
-
-AIM:   simulation of electrical switch, designing a C program to  simulate the operation of an electrical switch where the program takes input values of either ‘0’ or ‘1’ representing the switch being off and on respectively. Using suitable condition statements the program should interpret input values and display the corresponding condition as ‘on’ or ‘off’. 
+AIM: To create a C program using control structures similar to theme: Displaying grades and average of first year undergraduate students.
 
 RESEARCH:
-Electrical switches are fundamental components in electronic systems, operating in binary states: ON (1) and OFF (0). Simulating such behavior in software provides a conceptual understanding of digital logic and real-world applications such as traffic control, security systems, and parking management. By exploring this idea, we bridge the gap between hardware operation and software simulation, making it easier to visualize how a system interprets and responds to binary inputs.
+ideas:
+Educational Programs: A university might require applicants to have passed their 10+2 exams with a minimum percentage and have no backlogs, according to the institution's specific criteria. 
 
-IDEAS: 
-1. Window Lock (On/Off for Car or Home)
-2. Smart Door Locks (On/Off for Privacy or Security)
-3. Gas Leak Sensor (On/Off)
+Startup Funding: An incubator program may look for innovative and scalable business ideas, financial support received to date, or specific domicile status. 
 
-PROJECT:  Timer based parking system.
+Loan Applications: For a business loan, criteria might include a minimum operational history, annual revenue, and a sound financial standing.
+ 
+Job Recruitment: Candidates must have a minimum of 3 years of relevant experience, a bachelor’s degree in a related field, and proficiency in specific software tools. No prior criminal record and must be legally authorized to work in the country. 
 
-Overview of a Timer-Based Parking System:
+Housing Rentals: Applicants must demonstrate a steady income that is at least three times the monthly rent, provide references from previous landlords, and have a clean credit history. No pets allowed or pet size restrictions might apply.
 
-A timer-based parking system aims to monitor how long a car spends in a parking lot. The concept is to give a parking ticket or a token for a given time (e.g., 1 hour, 2 hours) and then keep track of the car's entry and exit so as to know whether the parking time has been exhausted. The system will provide a signal (such as 0 or 1) depending on whether the customer is within the time allowed.
+PROJECT:  loan eligibility check system.
+Loan applications are a critical aspect of financial systems, helping individuals and businesses access funds to meet personal or professional needs. Financial institutions typically use eligibility criteria to reduce the risk of defaults. These criteria may include:
+Annual Income/Revenue: Ensures the applicant has sufficient means to repay the loan.
+Operational Years (for businesses): Confirms business stability and sustainability.
+Credit Score: Reflects the applicant’s past financial behavior and repayment reliability.
 
-Important Parts and Procedure:
 
-Issue of Ticket:
-Upon the arrival of a vehicle into the parking lot, there is an issuance of a ticket. The ticket has important details such as the vehicle ID, the time of entry, and the time allowed to stay.
-
-Time Monitoring:
-The system keeps monitoring the time. This can be accomplished through a real-time clock that records when the vehicle arrived and compares it with the present time as the vehicle sits idle. The permitted time (e.g., 2 hours) is specified and utilized to monitor whether the vehicle has exceeded its given time.
-
-Input Mechanism:
-At any time, a check is done to see if the current time has passed the permitted parking time. In case the time is more than the given parking time, the system reads 0, signifying a time breach. If the time is less than or equal to the permitted duration, the system reads 1, showing no breach.
-
-Exit Process:
-Once the vehicle exits, the system checks the exit time against the ticket's entry time. If the car departs after the time limit has passed, the system will normally impose a penalty or mark the vehicle for a penalty. This is typically combined with a payment system that penalizes users for the additional time they occupied the parking spot.
-
-Use Cases:
-
-Public Parking Lots: Public parking lots (such as those at shopping malls or airports) can utilize these systems to make sure the users are charged appropriately according to time, and violations are automatically monitored.
-
-Event Parking: Timer-based systems are used for special events to oversee short-term parking and enforcing time limits effectively.
+Simulating a loan eligibility process in C provides an opportunity to apply control structures (if-else conditions) to real-world problems. It demonstrates how logical decision-making in finance can be represented using programming logic, bridging concepts of economics, finance, and technology.
 
 ANALYSIS:
-The key behavior of a switch lies in its ability to accept two distinct states. In the case of this project, the states are represented through user inputs:
-Input 1 → switch is ON → system considers the process as active.
+To replicate a loan eligibility check in a beginner-level C program, we need to define key thresholds:
+Annual Income → must be above a minimum limit (e.g., ₹5,00,000).
+Years of Business Operation → should meet a minimum (e.g., 2 years).
+Credit Score → should be higher than a threshold (e.g., 650).
 
 
-Input 0 → switch is OFF → system interprets the process as inactive.
+The program will take these inputs from the user, compare them against thresholds, and analyze eligibility:
+If all criteria are met, the applicant is “Eligible for Loan.”
+If any one of the conditions fails, the applicant is “Not Eligible.”
 
 
-In the parking system context, the allowed parking time acts as the threshold, and the user’s actual parked time serves as the input signal. Comparing these values determines whether the simulated switch condition remains ON (active session) or shifts to OFF (ended session).
+This decision-making closely resembles real-world banking systems but is simplified for a beginner programming context.
+
 IDEATE:
-To design the simulation, the following ideas were considered:
-Use of conditional statements (if-else) to mimic the switching logic.
+ Possible variations of the project could include:
+Personal Loan Eligibility
+Inputs: Monthly income, credit score, employment status.
+Output: Eligible / Not Eligible.
 
 
-Linking time-based conditions to represent real-world usage, where the switch “turns off” automatically once the session expires.
+Business Loan Eligibility (Selected for project)
+Inputs: Annual revenue, operational years, credit score.
+Output: Eligible / Not Eligible.
 
 
-Displaying clear messages to the user, translating abstract binary states into meaningful outputs such as “session not ended” (ON) or “session ended” (OFF).
-
+Student Loan Eligibility
+Inputs: Academic score percentage, guarantor availability, no existing defaulted loans.
+Output: Eligible / Not Eligible.
+Chosen Project: Business Loan Eligibility Check
+Provides multiple inputs for analysis.
+Demonstrates real-life financial decision-making logic.
+Offers clear “Yes/No” eligibility outcome, making it ideal for a beginner-level program.
 
 BUILD:
-The program was developed in the C language due to its simplicity, efficiency, and strong connection to hardware-level logic. The steps included:
-Accepting inputs from the user (time_limit and time_parked).
+The program was developed in the C language due to its wide use in system-level programming and simplicity in handling conditional structures.
+ Steps followed in building the program:
+Input collection:
+Annual income (ann_inc)
+Years of business operation (time_busns)
+Credit score (crdt_scr)
 
 
-Comparing the values to decide the state of the simulated switch.
+Eligibility check:
+If annual income ≥ ₹5,00,000
+If years of operation ≥ 2
+If credit score ≥ 650
 
 
-Mapping the outcomes to binary states:
+Only if all conditions are met, the applicant is declared “Eligible for Loan.”
 
 
-1 → Session active (ON).
+User choice:
+If eligible, the applicant can choose to proceed (choice == 1) or decline (choice == 0).
 
 
-0 → Session expired (OFF).
+Loan calculation (Simple Interest):
+Interest rate fixed at 10% p.a.
+Repayment time = 1 year
+Formula:
+Interest = (Principal × Rate × Time) / 100
+Total Amount = Principal + Interest
+Monthly Installment = Total Amount / 12
 
+
+Output:
+Displays eligibility result.
+Shows total repayment and per-month installment if loan is taken.
 
 TESTING:
-CODE:
-
+Code:
 #include <stdio.h>
 
 int main() {
-    int time_limit, time_parked;
-    printf("WELCOME TO TIMER BASED PARKING SYSTEM!\n\n");
-    printf("Enter allowed parking time (in minutes): ");
-    scanf("%d", &time_limit);
-    printf("Enter time parked (in minutes): ");
-    scanf("%d", &time_parked);
-    if (time_parked < time_limit) {
-        printf("\nINPUTING 1....\nParking session not ended yet.");  
-    } 
+    
+    float ann_inc, time_busns, crdt_scr, choice, ln_amt, total_amt, interest, amt_per_mo;
+    
+    printf("Welcome to ABC Bank!\nPlease enter the asked data to get a business loan.\n\n");
+    printf("Please enter your annual income: ");
+    scanf("%f", &ann_inc);
+    
+    printf("Please enter no. of Years of business operation: ");
+    scanf("%f", &time_busns);
+    
+    printf("Please enter your credit score: ");
+    scanf("%f", &crdt_scr);
+    
+    if (ann_inc>=500000 && time_busns>=2 && crdt_scr>=650) {
+        printf("\nCongratulations! you are eligible for loan.\n\nOur bank provides loan at interest rate of 10% Per annum (simple interest) and total time to repay the amount is 1 year. If interested, please input below '1' otherwise '2'if not interested. \n\nInput: ");
+        scanf("%f", &choice);
+        if (choice==1) {
+            printf("\nPlease enter loan amount: ");
+            scanf("%f", &ln_amt);
+            interest = (ln_amt*10*1)/100;
+            total_amt = interest + ln_amt;
+            amt_per_mo = total_amt/12;
+            printf("Total amount to be paid is: %.2f and amount per month to pay is: %.2f", total_amt, amt_per_mo);
+            printf("\nThank You for choosing our service.");
+        }
+        else if (choice==0) {
+            printf("Thank you for showing interest! hope you come back again!");
+        }
+        else {
+            printf("Please enter a valid input between 0 and 1.");
+        }
+    }
     else {
-        printf("\nINPUTING 0....\nParking session ended, please buy a new ticket.");  
+        printf("Sorry, you are not eligible for loan.\nPlease check eligibility criteria and come back again!");
     }
     return 0;
 }
-Several test cases were run to validate correct switching behavior:
-Case 1: time_parked < time_limit → Program outputs 1 and states the session is ongoing.
-
-
-Case 2: time_parked >= time_limit → Program outputs 0 and states the session has ended.
-
-
-Case 3: Boundary condition where time_parked == time_limit → Correctly identified as session ended (OFF). (considered in case 2)
 
 
 
-The results confirmed the program behaves like an electrical switch, toggling based on input conditions.
-IMPLEMENTATION:
-Github link:
-https://github.com/Varadraj-Kulkarni/EEL-project-1/blob/7adf90dbf5e4e86b7fa7e7e8c0399c76d0cec343/project1.c
+
+IMPLIMENTATION:
+The program can be implemented in a real-world banking simulation for basic eligibility screening before passing applications to detailed processing systems. It demonstrates:
+How simple conditions can filter applicants.
+How loan repayment details can be quickly computed.
+The practical use of conditional logic and arithmetic in decision-making software.                                                                                    
+Github link:  https://github.com/Varadraj-Kulkarni/EEL-project-2/blob/2724f3d5f73b3c6e282735559ba4d4c2cc0a104e/project2.c
+
 CONCLUSION:
-This project successfully demonstrates the simulation of an electrical switch through a C program. By interpreting input values (0 or 1) using conditional logic, the system mimics the real-world operation of a switch. The parking system example illustrates how binary logic governs practical applications, showcasing the direct relevance of simple programming constructs to real-life technological solutions.
+This project successfully simulates a Business Loan Eligibility System using C programming. By accepting inputs such as annual income, years of operation, and credit score, the program applies conditional logic to determine eligibility. If eligible, it further calculates total repayment and monthly installments based on simple interest.
+This demonstrates how fundamental control structures and arithmetic in C can be used to model real-world financial decision-making, making it a beginner-friendly yet practical project. 
 
-Sources:
-Parkopedia
-IoT for Smart Parking
-T2 Systems
-PayByPhone
-Flowbird
-Smart ParkingStripe
-ResearchGate 
-ThingSpeak
-
-
+SOURCES:
+Reserve Bank of India – Loan Guidelines
+Investopedia – Loan Eligibility and Credit Score Basics
+TutorialsPoint – C Programming Basics
+GeeksforGeeks – Control Structures in C
 
 
 
